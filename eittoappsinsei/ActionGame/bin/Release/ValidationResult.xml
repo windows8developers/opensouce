@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='C:\ProgramData\Windows App Certification Kit\results.xsl'?>
+<REPORT OVERALL_RESULT="PASS" VERSION="2.0.9200" TOOLSET_ARCHITECTURE="X64" SecureBoot="FALSE" APP_TYPE="WindowsStore" PUBLISHER_DISPLAY_NAME="npaka_000" OSVERSION="6.2.9200.0" OS="Microsoft Windows 8 Pro" PER_USER_APPLICATION="" PARTIAL_RUN="FALSE" LCID="1041" VALIDATION_TYPE="CommandLine" ReportGenerationTime="2012/08/22 19:36:37" ID="83c9d12c37cddff3eed023f4f231e2c1">
+  <REQUIREMENTS>
+    <REQUIREMENT NUMBER="1" TITLE="クリーンに元の状態に戻すことが可能かどうかのテスト" RATIONALE="クリーンで元に戻すことが可能なインストールにより、ユーザーはシステム上でアプリケーションを適切に管理 (展開と削除) できます。" />
+    <REQUIREMENT NUMBER="2" TITLE="正しいフォルダーにインストールするテスト" RATIONALE="Windows によって、プログラムとソフトウェア コンポーネント、共有アプリケーション データ、およびユーザー固有のアプリケーション データの保存先として、ファイル システム内の特定の保存場所が指定されます。" />
+    <REQUIREMENT NUMBER="3" TITLE="デジタル署名されたファイルのテスト" RATIONALE="Authenticode デジタル署名により、正規のソフトウェアであることを確認できます。また、ウイルス感染などによりファイルが改ざんされたかどうかを検出できます。" />
+    <REQUIREMENT NUMBER="4" TITLE="x64 Windows のサポートのテスト" RATIONALE="64 ビット バージョンの Windows との互換性を維持するには、アプリケーションが 64 ビット (または少なくとも 32 ビット) の Windows ベース アプリケーションをネイティブにサポートし、64 ビット バージョンの Windows 上でシームレスに動作することが必要になります。" />
+    <REQUIREMENT NUMBER="5" TITLE="OS バージョン チェックのテスト" RATIONALE="アプリケーションでバージョン チェック (== 5.1) を行わないでください。特定の機能が必要な場合は、その機能が使用できるかどうかをチェックしてください。Windows XP が必要な場合は、Windows XP 以降 (&gt;= 5.1) かどうかをチェックしてください。このように、検出コードは Windows の今後のバージョンでも引き続き動作します。ドライバーのインストーラーおよびアンインストール モジュールでは、OS のバージョン チェックを行いません。" />
+    <REQUIREMENT NUMBER="6" TITLE="ユーザー アカウント制御 (UAC) のテスト" RATIONALE="大部分のアプリケーションでは、実行時に管理者権限を要求せず、標準ユーザーとして問題なく実行できるようにします。Windows アプリケーションでは、マニフェスト (埋め込みまたは外部) を用意して実行レベルを定義し、アプリケーションの実行に必要な権限を OS に通知できるようにする必要があります。" />
+    <REQUIREMENT NUMBER="7" TITLE="システムの再起動マネージャーのメッセージに従う" RATIONALE="重大なシャットダウンが発生した場合、WM_QUERYENDSESSION に FALSE を返すアプリケーションは、WM_ENDSESSION が送信されて閉じられますが、WM_QUERYENDSESSION への応答でタイムアウトしたアプリケーションは、終了します。" />
+    <REQUIREMENT NUMBER="8" TITLE="セーフ モードのテスト" RATIONALE="既定では、Windows にプリインストールされていないドライバーとサービスの大部分は、セーフ モードでは起動されません。システムの基本動作や、診断および回復に必要でないかぎり、これらのドライバーとサービスは無効なままにしておきます。" />
+    <REQUIREMENT NUMBER="9" TITLE="マルチユーザー セッションのテスト" RATIONALE="Windows ユーザーが同時実行セッションを実行する際に、競合や中断が発生しないようにします。ローカルとリモートのいずれであっても、アプリケーションが複数のセッションで実行されているときに、アプリケーションの通常の機能に影響が発生しないことを徹底する必要があります。アプリケーションの設定およびデータ ファイルは、異なるユーザー間で保持されないようにします。ユーザーのプライバシーと設定は、ユーザーのセッションとは切り離しておきます。" />
+    <REQUIREMENT NUMBER="10" TITLE="クラッシュとハングのテスト" RATIONALE="クラッシュやハングなどのアプリケーション エラーが発生すると、ユーザーの作業が中断され、フラストレーションの原因になります。このようなエラーを削減することが、アプリケーションの安定性と信頼性を向上させ、全体としてより良質なアプリケーションの提供につながります。">
+      <TEST INDEX="47" NAME="アプリの起動テスト" DESCRIPTION="アプリケ起動をテストします。" EXECUTIONTIME="00h:00m:23s.10ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="21" NAME="クラッシュとハング" DESCRIPTION="テスト プロセス中にクラッシュまたはハングさせないでください。" EXECUTIONTIME="00h:00m:03s.95ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="11" TITLE="互換性と復元のテスト" RATIONALE="アプリケーションが互換性のない方法で動作していることが Windows によって検出された場合、アプリケーションが正しく動作し、ユーザーが快適に操作できるようにするために、互換性修正プログラムが適用されます。互換性修正プログラムは、レガシ アプリケーションが Windows 上で正しく動作することのみを目的に提供されているため、アプリケーションがその動作に依存しないようにする必要があります。" />
+    <REQUIREMENT NUMBER="12" TITLE="アプリ マニフェストの準拠のテスト" RATIONALE="パッケージ マニフェストに、1 つまたは複数の必須属性がありませんでした。">
+      <TEST INDEX="31" NAME="アプリ マニフェスト" DESCRIPTION="アプリ マニフェストには、すべての必須フィールドに有効なエントリを含める必要があります。" EXECUTIONTIME="00h:00m:02s.17ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="13" TITLE="Windows セキュリティのベスト プラクティスのテスト" RATIONALE="アプリケーションが Windows の既定のセキュリティ設定を変更しないようにします。" />
+    <REQUIREMENT NUMBER="14" TITLE="Windows セキュリティ機能のテスト" RATIONALE="アプリケーションは Windows セキュリティ機能をオプトインする必要があります。">
+      <TEST INDEX="33" NAME="Binary Analyzer" DESCRIPTION="バイナリ上で有効にされているセキュリティ機能を分析します" EXECUTIONTIME="00h:00m:01s.45ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="15" TITLE="サポートされている API のテスト" RATIONALE="アプリケーションは、Windows ストア アプリ用 Windows SDK によって許可された API のみを参照する必要があります。">
+      <TEST INDEX="38" NAME="サポートされている API" DESCRIPTION="Windows ストア アプリは、サポートされているプラットフォーム API のみを使用する必要があります。" EXECUTIONTIME="00h:00m:02s.25ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="17" TITLE="パフォーマンスのテスト" RATIONALE="アプリケーション起動時および中断時の速度と応答性を確保する一方で、システム リソース (CPU、ファイル IO、メモリなど) の消費量を適切に保ち、まだ開かれていないアプリケーション間で切り替えとマルチタスク処理を高速に実行できるようにする必要があります。">
+      <TEST INDEX="50" NAME="バイトコードの生成" DESCRIPTION="バイト コードの生成は、HTML5 Windows ストア アプリを含むパッケージで正常に完了する必要があります。" EXECUTIONTIME="00h:00m:01s.39ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="43" NAME="起動パフォーマンス" DESCRIPTION="アプリケーションは、CPU、ファイル IO、およびメモリの使用率を適切に保ちながら迅速に起動できる必要があります" EXECUTIONTIME="00h:01m:05s.06ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="44" NAME="中断パフォーマンス" DESCRIPTION="アプリケーションは、CPU およびファイル IO の使用率を適切に保ちながら迅速に中断できる必要があります" EXECUTIONTIME="00h:01m:15s.42ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="19" TITLE="アプリ マニフェスト リソースのテスト" RATIONALE="Appx パッケージ マニフェストには、Appx パッケージング仕様と Appx マニフェスト スキーマに従って、resources.pri ファイル内で定義された有効なリソースを含める必要があります。">
+      <TEST INDEX="45" NAME="アプリ リソースの検証" DESCRIPTION="パッケージには resources.pri ファイル内で定義された有効なリソースを含める必要があります。" EXECUTIONTIME="00h:00m:00s.65ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="20" TITLE="デバッグ構成のテスト" RATIONALE="アプリによるデバッグ バイナリのインストールは禁止されています。">
+      <TEST INDEX="46" NAME="デバッグの構成" DESCRIPTION="アプリによるデバッグ バイナリのインストールは禁止されています。" EXECUTIONTIME="00h:00m:02s.12ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="21" TITLE="ファイルのエンコード" RATIONALE="HTML5 Windows ストア アプリを含むパッケージは、ファイルが正しくエンコードされている必要があります。">
+      <TEST INDEX="49" NAME="UTF-8 ファイル エンコード" DESCRIPTION="HTML5 Windows ストア アプリを含むパッケージは、ファイルが正しくエンコードされている必要があります。" EXECUTIONTIME="00h:00m:01s.33ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="22" TITLE="Direct3D 機能レベルのサポート" RATIONALE="アプリケーションは、Direct3D 機能レベル 9.1 のハードウェア上のコンテンツを表示する必要があります。">
+      <TEST INDEX="51" NAME="Direct3D 機能レベルのサポート" DESCRIPTION="アプリケーションは、Direct3D 機能レベル 9.1 のハードウェア上のコンテンツを表示する必要があります。" EXECUTIONTIME="00h:00m:00s.74ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="23" TITLE="アプリ機能テスト" RATIONALE="特殊用途の機能を宣言するパッケージでは、オンボード プロセス時に理由を指定する必要があります。">
+      <TEST INDEX="52" NAME="特殊用途の機能" DESCRIPTION="特殊用途の機能を宣言するパッケージでは、オンボード プロセス時に理由を指定する必要があります。" EXECUTIONTIME="00h:00m:01s.31ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="24" TITLE="Windows ランタイム メタデータの検証" RATIONALE="メタデータは、すべての生成ソースにわたって整合性および一貫性を維持している必要があります。">
+      <TEST INDEX="56" NAME="ExclusiveTo 属性テスト" DESCRIPTION="クラスは、別のクラスに対して ExclusiveTo とマークされたインターフェイスを実装してはなりません。" EXECUTIONTIME="00h:00m:01s.06ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="57" NAME="型のロケーション テスト" DESCRIPTION="一致する名前空間が最も長いメタデータ ファイル内に、型が定義されている必要があります。" EXECUTIONTIME="00h:00m:00s.64ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="55" NAME="型名の大文字小文字の区別テスト" DESCRIPTION="名前空間および型名は、大文字/小文字の違いだけで異なるものにすることはできません。" EXECUTIONTIME="00h:00m:00s.65ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="54" NAME="型名の正確性テスト" DESCRIPTION="システム型に限り、Windows 名前空間に存在できます。グローバル名前空間には、どの型も存在できません。" EXECUTIONTIME="00h:00m:00s.65ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="58" NAME="一般的なメタデータ正確性テスト" DESCRIPTION="メタデータ ファイルは、有効かつ正確であるためにさまざまな要件を満たしている必要があります。" EXECUTIONTIME="00h:00m:01s.03ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="53" NAME="プロパティ テスト" DESCRIPTION="書き込み専用およびインデクサー プロパティを使用できない可能性があります。対応する getter メソッドと setter メソッドの型が一致している必要があります。" EXECUTIONTIME="00h:00m:00s.64ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+  </REQUIREMENTS>
+  <APPLICATIONS>
+    <Installed_Programs>
+      <Program Name="34af8aa5-c5e9-40f1-81dc-13b4cedc7815" Type="Application" Source="AppxPackage" Publisher="CN=npaka_000" Version="1.0.0.1" Language="1033" OnSystemDrive="true" RootDirPath="C:\Program Files\WindowsApps\34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce" PathEvidenceId="0x16ef" RNP="0x1" DNP="0xd" EvidenceId="0x16ef" Id="0000063b0e7d0bdb679a631d136fa759bacd00000904">
+        <Indicators>
+          <DirectoryIndicators>
+            <Directory Name="34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce" Path="c:\program files\windowsapps\34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce" RNP="0x9" DNP="0xb" UniqueId="0x16f0" Id="0000df49ec46da4c24aa280f07fb5a19eceeeda746ba" />
+            <Directory Name="js" Path="c:\program files\windowsapps\34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce\js" RNP="0x9" DNP="0xb" UniqueId="0x16f4" Id="0000ed830a2cad918e620bb3cae846c3985ea8ddae26" />
+          </DirectoryIndicators>
+          <PackageManifestIndicator>
+            <PackageManifest PackageFullName="34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce" />
+            <Identity Name="34af8aa5-c5e9-40f1-81dc-13b4cedc7815" Version="1.0.0.1" Publisher="CN=npaka_000" ProcessorArchitecture="neutral" />
+            <Dependencies>
+              <PackageDependency Name="Microsoft.WinJS.1.0" MinVersion="1.0.8514.0" />
+            </Dependencies>
+            <Properties>
+              <DisplayName>ActionGame</DisplayName>
+              <PublisherDisplayName>npaka_000</PublisherDisplayName>
+              <Logo>images\storelogo.png</Logo>
+            </Properties>
+            <Resources>
+              <Resource Language="JA-JP" />
+            </Resources>
+            <Prerequisites>
+              <OSMinVersion>6.2.1</OSMinVersion>
+              <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+            </Prerequisites>
+            <Capabilities>
+              <Capability Name="internetClient" />
+            </Capabilities>
+          </PackageManifestIndicator>
+        </Indicators>
+        <StaticProperties>
+          <Files Id="000072029759c476fc97dad244f65bd20e36deba7486">
+            <File Name="default.html" Id="0000ce13258164a4c3cf16a1f31ff94ba1d836089859" ShortName="DEFAUL~1.HTM" Size="0x2f9" BinaryType="UNKNOWN" Created="08/22/2012 10:33:19" Modified="08/22/2012 10:33:19" Path="c:\program files\windowsapps\34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce\default.html" LongPathHash="0000b81a680035ed11b453c87a1fb1b578ab207c3942" UniqueId="0x16f1" />
+            <File Name="default.js" Id="00006a20fc899781c788e9ee919742e37a94ac5ef369" Size="0x1bfd" BinaryType="UNKNOWN" Created="08/22/2012 10:33:19" Modified="08/22/2012 10:33:19" Path="c:\program files\windowsapps\34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\program files\windowsapps\34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce\js\default.js" LongPathHash="000047bb1b8a580bc48d448310ab5b9844cc132f0ebd" UniqueId="0x16f5" />
+          </Files>
+        </StaticProperties>
+      </Program>
+    </Installed_Programs>
+  </APPLICATIONS>
+  <DEPENDENCY_INFORMATION>
+    <AitStaticAnalysis ProgramId="0000063b0e7d0bdb679a631d136fa759bacd00000904" AnalysisVersion="1.54" DictionaryVersion="1.6" Type="Package" Id="34af8aa5-c5e9-40f1-81dc-13b4cedc7815_1.0.0.1_neutral__fcshzp1k9vkce">
+      <AitFile ErrorCode="0" Name="default.js" Id="00006a20fc899781c788e9ee919742e37a94ac5ef369">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Application" />
+          <AitFeature Name="WinJS.UI.processAll" />
+          <AitFeature Name="WinJS.strictProcessing" />
+          <AitFeature Name="Windows.ApplicationModel.Activation" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="default.html" Id="0000ce13258164a4c3cf16a1f31ff94ba1d836089859">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.UI.ViewBox" />
+        </AitCategory>
+      </AitFile>
+    </AitStaticAnalysis>
+  </DEPENDENCY_INFORMATION>
+</REPORT>

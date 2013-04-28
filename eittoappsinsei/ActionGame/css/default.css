@@ -1,0 +1,9 @@
+﻿body {
+    background-color: #000;    
+}
+
+.fixedlayout {
+    height: 720px;
+    width: 1280px;
+    background-color: #fff;
+}
