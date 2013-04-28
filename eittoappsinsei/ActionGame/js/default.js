@@ -24,7 +24,7 @@
     var touchDown=false;   //タッチダウン
     
     //プレイヤー(3)
-    var playerX=120;//X座標
+    var playerX=160;//X座標
     var playerY;    //Y座標
     var playerVY=0; //Y速度
     var playerHit;  //衝突
@@ -108,7 +108,7 @@
         if (init>=0) {
             //タイトルの初期化　
             if (init==S_TITLE) {
-                playerY=260;
+                playerY=360;
                 playerVY=0;
                 playerHit=false;
                 meteoAppear=0;
@@ -136,7 +136,7 @@
             
             if (!playerHit) {
                 //隕石の移動と出現(4)
-                for (var i=0;i<20;i++) {
+                for (var i=0;i<8;i++) {
                     if (meteoY[i]>=0) {
                         meteoX[i]-=5;
                         if (meteoX[i]<-60) meteoY[i]=-1;
