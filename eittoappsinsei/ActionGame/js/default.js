@@ -24,7 +24,7 @@
     var touchDown=false;   //タッチダウン
     
     //プレイヤー(3)
-    var playerX=160;//X座標
+    var playerX=200;//X座標
     var playerY;    //Y座標
     var playerVY=0; //Y速度
     var playerHit;  //衝突
